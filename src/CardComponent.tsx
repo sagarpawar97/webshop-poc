@@ -1,10 +1,14 @@
 import { Box, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
 
 const CardComponent = (props) => {
-  let { img, text } = props;
+  let {  img,
+    text,
+    selectedTxt,
+    handleChipSelection } = props;
   return (
-    <Box justifyContent={'normal'}>
-     {img ? <Card
+    <div className="drawer-cardContainer" style={{ cursor: "pointer" }}>
+    {img ? (
+      <Card
         sx={{
           width: 120,
           height: img ? 120 : 30,
@@ -31,28 +35,31 @@ const CardComponent = (props) => {
             backgroundColor: "#F5F5F5",
           }}
         >
-           
+          {img ? (
             <Typography variant="body2" color="text.secondary">
               {text ? text : "This is a sample"} .
             </Typography>
-          
+          ) : (
+            <Chip label={text} variant="outlined" />
+          )}
         </CardContent>
-      </Card> : <Chip
-          label={text || "Label"}
-          sx={{
-            fontWeight: 500,
-            color: "#333",
-            backgroundColor: "#e3f2fd",
-            padding: "4px 8px",
-            margin: "4px",
-            maxWidth: "100%",
-            whiteSpace: "normal",
-            lineHeight: 1.2,
-          }}
-          variant="outlined"
-        />
-      }
-    </Box>
+      </Card>
+    ) : (
+      <Chip
+        label={text}
+        variant="outlined"
+        onClick={() => handleChipSelection(text)}
+        sx={{
+          backgroundColor: selectedTxt === text ? "#00A0D0" : "#e0e0e0",
+          color: selectedTxt === text ? "#fff" : "#000",
+          fontWeight: 500,
+          // "&:hover": {
+          //   backgroundColor: selectedTxt === text ? "#1565c0" : "#d5d5d5",
+          // },
+        }}
+      />
+    )}
+  </div>
   );
 };
 

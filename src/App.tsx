@@ -165,6 +165,7 @@ export default function BasicCard() {
   const [selectedItem, setSelectedItem] = React.useState('');
   const [drawerData, setDrawerData] = React.useState([]);
   const [view, setView] = React.useState("list");
+  const [selectedTxt, setSelectedTxt] = React.useState("");
 
   
   const handleCardClick = (item) => {
@@ -176,12 +177,22 @@ export default function BasicCard() {
     }
     setIsDrawerOpen(true);
   };
+  
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
+  
+  const handleChipSelection = (label) => {
+    setSelectedTxt(label);
+  };
+  
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
+      setIsDrawerOpen(false);
+      setSelectedTxt("");
+      setDrawerData([]);
     };
+    
   return (
     <div
       className={`grid-container ${isDrawerOpen ? "with-drawer" : "no-drawer"}`}
@@ -331,7 +342,7 @@ export default function BasicCard() {
             sx: {
               width: 480,
               padding: 2,
-              height: '90vh',
+              height: '80vh',
               overflow: "auto",
               zIndex: 0,
             },
@@ -362,7 +373,8 @@ export default function BasicCard() {
               }}
             >
               {drawerData?.map((item) => (
-                <CardComponent img={item?.img} text={item?.text} />
+                <CardComponent img={item?.img} text={item?.text}  handleChipSelection={handleChipSelection}
+                selectedTxt={selectedTxt} />
               ))}
             </div>
           </div>

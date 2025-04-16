@@ -24,7 +24,7 @@ body {
   grid-row: 1 / 2; /* First row */
   background-color: #f1f3f5;
   position: relative;
-  height: 85vh;
+  height: 78vh;
   overflow-y: auto;
   overflow-x: hidden;
   padding:10px;
@@ -41,7 +41,7 @@ body {
   grid-row: 2 / 3; /* Second row */
   background-color: #f1f3f5;
   z-index: 999;
-  margin-top: 95px;
+  margin-top: 65px;
 }
 
 .grid-container.no-drawer {
@@ -87,4 +87,20 @@ body {
 }
 .active {
   border: 1px solid blue;
+}
+
+
+@media screen and (min-width: 1900px) and (max-width: 2499px) {
+  .item4{
+    margin-top: 100px ;
+  }
+  
+}
+
+
+@media screen and (min-width: 2500px) {
+  .item4{
+    margin-top: 290px ;
+  }
+  
 }
