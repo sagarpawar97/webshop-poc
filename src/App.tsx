@@ -257,6 +257,7 @@ export default function BasicCard() {
                     header={item.label}
                     handleCardClick={() => handleCardClick(item)}
                     selected={selectedItem === item.label}
+                    isDrawerOpen={isDrawerOpen}
                   />
                 ))}
                 {/* <DisplayCard
@@ -300,6 +301,7 @@ export default function BasicCard() {
                     header={item.label}
                     handleCardClick={() => handleCardClick(item)}
                     selected={selectedItem === item.label}
+                    isDrawerOpen={isDrawerOpen}
                   />
                 ))}
               </div>
