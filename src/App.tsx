@@ -166,7 +166,7 @@ const data1 = [
 
 export default function BasicCard() {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
-  const [selectedItem, setSelectedItem] = React.useState(false);
+  const [selectedItem, setSelectedItem] = React.useState('');
   const [drawerData, setDrawerData] = React.useState([]);
   const [view, setView] = React.useState("list");
 
@@ -349,7 +349,7 @@ export default function BasicCard() {
                 variant="outlined"
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment>
+                    <InputAdornment position="end">
                       <IconButton>
                         <SearchIcon />
                       </IconButton>
