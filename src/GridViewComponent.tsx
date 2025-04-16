@@ -3,7 +3,7 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import DisplayCard from './DisplayCard'; // Ensure correct path to DisplayCard
 
-const GridViewComponent = ({ items, selectedItem, handleCardClick }) => {
+const GridViewComponent = ({ items, selectedItem, handleCardClick,  isDrawerOpen}) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -19,6 +19,7 @@ const GridViewComponent = ({ items, selectedItem, handleCardClick }) => {
               handleCardClick={() => handleCardClick(item)}
               selected={selectedItem === item.label}
               required={item.required}
+              isDrawerOpen={isDrawerOpen}
             />
           </Box>
         ))}

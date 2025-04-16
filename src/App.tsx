@@ -311,6 +311,7 @@ export default function BasicCard() {
           items={gridViewData}
           handleCardClick={handleCardClick}
           selectedItem={selectedItem}
+          isDrawerOpen={isDrawerOpen}
         />}
         <div style={{ position: "absolute", top: "55%", right: "-1px" }}>
           <IconButton
