@@ -358,8 +358,7 @@ export default function BasicCard() {
               style={{
                 display: "flex",
                 gap: "10px",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
+                flexWrap: "wrap"     
               }}
             >
               {drawerData?.map((item) => (
