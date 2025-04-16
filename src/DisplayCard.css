@@ -11,10 +11,6 @@
     transition: border 0.2s;
   }
   
-  .cardItm.active {
-    border: 2px solid blue;
-  }
-  
   .corner-badge {
     position: absolute;
     top: 0;

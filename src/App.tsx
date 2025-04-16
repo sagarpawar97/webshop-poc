@@ -209,7 +209,7 @@ export default function BasicCard() {
       <Box sx={{ paddingBottom: 0 }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Box padding={1}>
-          <Typography variant="h3" component="h3" sx={{ fontWeight: 'bold', color: 'primary.main', mb: 1 }}>
+          <Typography variant="h3" component="h3" sx={{ fontWeight: 'bold', color:"#0a5184", mb: 1 }}>
             Classroom Deadlock
           </Typography>
           <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
