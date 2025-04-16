@@ -124,43 +124,39 @@ const data1 = [
   },
   {
     type: "text",
-    text: "This is sample",
+    text: "This is sample1",
   },
   {
     type: "text",
-    text: "This is sample",
+    text: "This is sample2",
   },
   {
     type: "text",
-    text: "This is sample",
+    text: "This is sample3",
   },
   {
     type: "text",
-    text: "This is sample",
+    text: `1.875 - 1 7/8" Thick Door`,
   },
   {
     type: "text",
-    text: "This is sample",
+    text: `47 3/8" - 47 3/8" - Door Width`,
   },
   {
     type: "text",
-    text: "Another sample",
+    text: `48MM - 1 7/8" Thick Door`,
   },
   {
     type: "text",
-    text: "Another sample",
-  },
-  {
-    type: "text",
-    text: "Another sample",
+    text: `1.9 - 1 7/8" Thick Door`,
   },
   {
     type: "text",
     text: "Another sample",
   },
   {
-    type: "text",
-    text: "Another sample",
+    tyoe: "text",
+    text: `54MM - 2 1/8" Thick Door`,
   },
 ];
 
@@ -333,7 +329,7 @@ export default function BasicCard() {
           open={isDrawerOpen}
           PaperProps={{
             sx: {
-              width: 400,
+              width: 480,
               padding: 2,
               height: '90vh',
               overflow: "auto",

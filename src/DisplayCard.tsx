@@ -14,7 +14,7 @@ const DisplayCard = (props: any) => {
   }
 
   return (
-    <IconButton aria-label={notificationsLabel()}>
+  
       <Badge badgeContent={notificationsLabel()} color={ required ?  "error" : "primary"}>
         <div
           className={`cardItm ${selected ? "active" : ""}`}
@@ -32,7 +32,7 @@ const DisplayCard = (props: any) => {
           </span>
         </div>
       </Badge>
-    </IconButton>
+
 
   );
 };

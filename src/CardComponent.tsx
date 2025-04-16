@@ -1,10 +1,10 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
 
- const CardComponent = (props:any) => {
-    let { img, text } = props;
+const CardComponent = (props) => {
+  let { img, text } = props;
   return (
-    <div>
-      <Card
+    <Box justifyContent={'normal'}>
+     {img ? <Card
         sx={{
           width: 120,
           height: img ? 120 : 30,
@@ -31,12 +31,28 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
             backgroundColor: "#F5F5F5",
           }}
         >
-          <Typography variant="body2" color="text.secondary">
-            {text ? text : "This is a sample"} .
-          </Typography>
+           
+            <Typography variant="body2" color="text.secondary">
+              {text ? text : "This is a sample"} .
+            </Typography>
+          
         </CardContent>
-      </Card>
-    </div>
+      </Card> : <Chip
+          label={text || "Label"}
+          sx={{
+            fontWeight: 500,
+            color: "#333",
+            backgroundColor: "#e3f2fd",
+            padding: "4px 8px",
+            margin: "4px",
+            maxWidth: "100%",
+            whiteSpace: "normal",
+            lineHeight: 1.2,
+          }}
+          variant="outlined"
+        />
+      }
+    </Box>
   );
 };
 

@@ -6,7 +6,7 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 500px 1fr 400px; /* Three equal columns */
+  grid-template-columns: 500px 1fr 480px; /* Three equal columns */
   grid-template-rows: 500px 100px; /* Two fixed-height rows */
   height: 100vh;
   gap: 10px;
@@ -75,7 +75,7 @@ body {
   text-align: center;
   transition: all 0.2s linear;
   position: relative;
-  width: 260px;
+  width: 250px;
 }
 
 .item2 .cardWrapper {
